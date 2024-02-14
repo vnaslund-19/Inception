@@ -9,7 +9,7 @@ RUN apt install -y wget\
 
 # Create Wordpress directory
 RUN mkdir -p /var/www/wordpress
-RUN chown -R roor:root /var/www/wordpress
+RUN chown -R root:root /var/www/wordpress
 
 # Remove default and andd custom PHP-FPM config
 RUN rm /etc/php/7.3/fpm/pool.d/www.conf
