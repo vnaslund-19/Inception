@@ -6,7 +6,7 @@
 #    By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/08 17:03:12 by vnaslund          #+#    #+#              #
-#    Updated: 2024/02/14 18:57:25 by vnaslund         ###   ########.fr        #
+#    Updated: 2024/02/15 17:25:56 by vnaslund         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ stop:
 	@echo "$(RED)Containers are stopped.$(RESET)"
 
 clean:
-	@rm -rf data/
+	@sudo rm -rf data/
 
 re: down up
 
