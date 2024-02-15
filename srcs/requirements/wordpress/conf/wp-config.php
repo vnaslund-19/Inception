@@ -11,22 +11,22 @@
 
 // ** MySQL settings ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', getenv('WP_DB_NAME') );
+define('DB_NAME', getenv('SQL_DATABASE'));
 
 /** MySQL database username */
-define( 'DB_USER', getenv('WP_DB_USER') );
+define('DB_USER', getenv('SQL_USER'));
 
 /** MySQL database password */
-define( 'DB_PASSWORD', getenv('WP_DB_PASSWORD') );
+define('DB_PASSWORD', getenv('SQL_PASSWORD'));
 
 /** MySQL hostname */
-define( 'DB_HOST', getenv('WP_DB_HOST') );
+define('DB_HOST', getenv('SQL_HOST'));
 
 /** Database Charset to use in creating database tables. */
-define( 'DB_CHARSET', 'utf8' );
+define('DB_CHARSET', 'utf8');
 
 /** The Database Collate type. Don't change this if in doubt. */
-define( 'DB_COLLATE', '' );
+define('DB_COLLATE', '');
 
 /**#@+
  * Authentication Unique Keys and Salts.
@@ -71,9 +71,10 @@ define('WP_DEBUG', false);
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
-if ( ! defined( 'ABSPATH' ) ) {
-    define( 'ABSPATH', dirname( __FILE__ ) . '/' );
+if (!defined('ABSPATH')) {
+    define('ABSPATH', dirname(__FILE__) . '/');
 }
 
 /** Sets up WordPress vars and included files. */
-require_once( ABSPATH . 'wp-settings.php' );
+require_once(ABSPATH . 'wp-settings.php');
+
