@@ -17,7 +17,6 @@ services:
   wordpress:
     depends_on:
       - mariadb
-      - redis
     build: ./requirements/wordpress
     image: inception-wordpress:latest
     container_name: wordpress
