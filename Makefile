@@ -6,7 +6,7 @@
 #    By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/08 17:03:12 by vnaslund          #+#    #+#              #
-#    Updated: 2024/02/15 17:25:56 by vnaslund         ###   ########.fr        #
+#    Updated: 2024/04/23 11:27:32 by vnaslund         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,10 +19,10 @@ COMPOSE=./srcs/docker-compose.yml
 up:
 	@mkdir -p data/wordpress data/mariadb
 	@docker-compose -f $(COMPOSE) up -d --build
-	@echo "$(GREEN)Containers are running.$(RESET)"
+	@echo "$(GREEN)Containers are up and running.$(RESET)"
 
 down:
-	@docker-compose -f $(COMPOSE) down -v
+	@sudo docker-compose -f $(COMPOSE) down -v
 	@echo "$(RED)Containers are down.$(RESET)"
 
 stop:
