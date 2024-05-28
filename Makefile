@@ -6,7 +6,7 @@
 #    By: vnaslund <vnaslund@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/08 17:03:12 by vnaslund          #+#    #+#              #
-#    Updated: 2024/04/23 11:27:32 by vnaslund         ###   ########.fr        #
+#    Updated: 2024/05/28 17:27:36 by vnaslund         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ up:
 	@echo "$(GREEN)Containers are up and running.$(RESET)"
 
 down:
-	@sudo docker-compose -f $(COMPOSE) down -v
+	@docker-compose -f $(COMPOSE) down -v
 	@echo "$(RED)Containers are down.$(RESET)"
 
 stop:
