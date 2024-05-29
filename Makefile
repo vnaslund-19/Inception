@@ -17,7 +17,7 @@ RESET = \033[0m
 COMPOSE=./srcs/docker-compose.yml
 
 up:
-	@mkdir -p data/wordpress data/mariadb
+	@mkdir -p /home/vnaslund/data/wordpress /home/vnaslund/data/mariadb
 	@docker-compose -f $(COMPOSE) up -d --build
 	@echo "$(GREEN)Containers are up and running.$(RESET)"
 

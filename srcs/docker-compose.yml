@@ -1,4 +1,4 @@
-version: '3'
+version: '3' # Docker compose version
 
 services:
   nginx:
@@ -21,7 +21,7 @@ services:
     container_name: wordpress
     env_file: .env
     volumes:
-      - wordpress:/var/www/wordpress
+      - wordpress:/var/www/wordpress # Container virtual path
     networks:
       - inception
     build: 
@@ -42,26 +42,27 @@ services:
       dockerfile: Dockerfile
     env_file: .env
     volumes:
-      - mariadb:/var/lib/mysql
+      - mariadb:/var/lib/mysql  
     restart: unless-stopped
     expose:
       - "3306"
   
 volumes:
   wordpress:
-    driver: local
+    driver: local # Data is stored locally (on host machine)
     driver_opts:
       type: 'none'
       o: 'bind'
-      device: '${PWD}/data/wordpress'
+      device: '/home/vnaslund/data/wordpress' # Data from container is mapped to
   
   mariadb:
-    driver: local
+    driver: local 
     driver_opts:
       type: 'none'
       o: 'bind'
-      device: '${PWD}/data/mariadb'
+      device: '/home/vnaslund/data/mariadb'
 
 networks:
   inception:
-    driver: bridge
+    driver: bridge # Private internal network, allows containers to communicate
+# The services can only be accessed from outside the host on exposed ports

@@ -4,3 +4,10 @@ socket  = /run/mysqld/mysqld.sock
 bind_address=*
 port = 3306
 user = mysql 
+
+# The socket is a special file used for 
+# inter-process communication for 
+# local connections to the MariaDB server
+
+# bind_address=* determines that the server will listen to 
+# all IP addresses for incoming connections

@@ -11,7 +11,7 @@ RUN apt install -y wget\
 RUN mkdir -p /var/www/wordpress
 RUN chown -R root:root /var/www/wordpress
 
-# Remove default and andd custom PHP-FPM config
+# Remove default and add custom PHP-FPM config
 RUN rm /etc/php/7.3/fpm/pool.d/www.conf
 COPY conf/www.conf /etc/php/7.3/fpm/pool.d/www.conf
 
