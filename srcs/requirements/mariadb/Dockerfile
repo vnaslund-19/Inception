@@ -9,6 +9,7 @@ COPY conf/mysqld.cnf /etc/mysql/mariadb.conf.d/mysqld.cnf
 COPY conf/create.sh /tmp/create.sh
 RUN chmod +x /tmp/create.sh
 
+# The container listens on this port
 EXPOSE 3306
 
 CMD [ "/tmp/create.sh" ]

@@ -9,6 +9,8 @@ RUN apt install -y wget\
 
 # Create Wordpress directory
 RUN mkdir -p /var/www/wordpress
+
+# For permissions
 RUN chown -R root:root /var/www/wordpress
 
 # Remove default and add custom PHP-FPM config
