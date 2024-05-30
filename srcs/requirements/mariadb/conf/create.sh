@@ -1,6 +1,7 @@
 #!/bin/sh
 
-service mysql start; # Prepares for SQL cmd's
+# Prepare for SQL cmd's
+service mysql start;
 mysql -e "CREATE DATABASE \`${SQL_DATABASE}\`;"
 mysql -e "CREATE USER \`${SQL_USER}\`@'localhost' IDENTIFIED BY '${SQL_PASSWORD}';"
 mysql -e "GRANT ALL PRIVILEGES ON \`${SQL_DATABASE}\`.* TO \`${SQL_USER}\`@'%' IDENTIFIED BY '${SQL_PASSWORD}';"

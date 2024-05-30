@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sleep 10 # Make sure DB is ready
+sleep 10
 
 if [ -f ./wp-config.php ]; then
     echo "wp-config.php already exists"
@@ -29,7 +29,7 @@ else
                    --role=author \
                    --user_pass="$WP_USER_PASSWORD" \
                    --path='/var/www/wordpress'
-fi # Close if statement
+fi
 
 # Start PHP-FPM
 /usr/sbin/php-fpm7.3 -F
